@@ -1,0 +1,129 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+}
+
+#button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    width: 95%; /* Full width for the button grid */
+    margin: 0 auto; /* Center on the page */
+}
+
+button {
+    min-width: 60px; /* Minimum button width */
+    height: 60px; /* Fixed height */
+    margin: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+    line-height: 60px; /* Center text vertically */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.prime {
+    background-color: #28a745;
+    color: white;
+    animation: fadeInPrime 0.5s ease;
+}
+
+button.not-prime {
+    background-color: #dc3545;
+    color: white;
+    animation: fadeInNotPrime 0.5s ease;
+}
+
+@keyframes fadeInPrime {
+    0% {
+        background-color: white;
+        color: black;
+    }
+    100% {
+        background-color: #28a745;
+        color: white;
+    }
+}
+
+@keyframes fadeInNotPrime {
+    0% {
+        background-color: white;
+        color: black;
+    }
+    100% {
+        background-color: #dc3545;
+        color: white;
+    }
+}
+
+button:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    border-color: #007bff;
+}
+
+#bubble {
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    max-width: 250px;
+    font-size: 14px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+#control-buttons {
+    display: flex; /* Use flexbox to align buttons in a row */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Add some space between the buttons */
+    margin-bottom: 20px; /* Add some space below the buttons */
+}
+
+#mark-all, #clear-all {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+#mark-all:hover, #clear-all:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+}
+
+#clear-all {
+    background-color: #ff6347;
+}
+
+#clear-all:hover {
+    background-color: #e55337;
+}
